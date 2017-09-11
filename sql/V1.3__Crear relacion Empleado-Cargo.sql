@@ -1,0 +1,5 @@
+ALTER TABLE Empleado ADD CargoId INT NOT NULL;
+
+ALTER TABLE Empleado ADD CONSTRAINT EmpleadoCargo
+FOREIGN KEY (CargoId)
+REFERENCES Cargo(id);
