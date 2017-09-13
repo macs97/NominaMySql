@@ -1,1 +1,0 @@
-mysqldump -u dev Nomina > dev.backup.sql
