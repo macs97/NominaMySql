@@ -25,8 +25,9 @@ DROP TABLE IF EXISTS `cargo`;
 CREATE TABLE `cargo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(40) NOT NULL,
+  `Salario` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +36,7 @@ CREATE TABLE `cargo` (
 
 LOCK TABLES `cargo` WRITE;
 /*!40000 ALTER TABLE `cargo` DISABLE KEYS */;
-INSERT INTO `cargo` VALUES (1,'DESARROLLADOR');
+INSERT INTO `cargo` VALUES (1,'DESARROLLADOR',NULL),(2,'ARQUITECTO',NULL);
 /*!40000 ALTER TABLE `cargo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +97,7 @@ CREATE TABLE `schema_version` (
 
 LOCK TABLES `schema_version` WRITE;
 /*!40000 ALTER TABLE `schema_version` DISABLE KEYS */;
-INSERT INTO `schema_version` VALUES (1,'1.1','Crear tabla empleado','SQL','V1.1__Crear tabla empleado.sql',-1945339738,'dev','2017-09-11 14:30:05',680,1),(2,'1.2','Crear tabla cargo','SQL','V1.2__Crear tabla cargo.sql',-303048134,'dev','2017-09-11 14:30:06',544,1),(3,'1.3','Crear relacion Empleado-Cargo','SQL','V1.3__Crear relacion Empleado-Cargo.sql',-1685987658,'dev','2017-09-11 14:30:10',3831,1),(4,'1.4','Crear Vista Empleado','SQL','V1.4__Crear Vista Empleado.sql',474292473,'dev','2017-09-11 14:30:10',148,1),(5,'1.5','Insertar datos en Empleado y Cargo','SQL','V1.5__Insertar datos en Empleado y Cargo.sql',-1429500660,'dev','2017-09-11 14:39:24',3,1);
+INSERT INTO `schema_version` VALUES (1,'1.1','Crear tabla empleado','SQL','V1.1__Crear tabla empleado.sql',-1945339738,'dev','2017-09-11 14:30:05',680,1),(2,'1.2','Crear tabla cargo','SQL','V1.2__Crear tabla cargo.sql',-303048134,'dev','2017-09-11 14:30:06',544,1),(3,'1.3','Crear relacion Empleado-Cargo','SQL','V1.3__Crear relacion Empleado-Cargo.sql',-1685987658,'dev','2017-09-11 14:30:10',3831,1),(4,'1.4','Crear Vista Empleado','SQL','V1.4__Crear Vista Empleado.sql',474292473,'dev','2017-09-11 14:30:10',148,1),(5,'1.5','Insertar datos en Empleado y Cargo','SQL','V1.5__Insertar datos en Empleado y Cargo.sql',-1429500660,'dev','2017-09-11 14:39:24',3,1),(6,'1.6','Insertar datos en Cargo','SQL','V1.6__Insertar datos en Cargo.sql',2104765498,'dev','2017-09-11 19:05:37',1,1),(7,'1.7','Alterar tabla Cargo','SQL','V1.7__Alterar tabla Cargo.sql',-635509483,'dev','2017-09-11 19:05:38',1265,1);
 /*!40000 ALTER TABLE `schema_version` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +143,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-11 11:02:21
+-- Dump completed on 2017-09-13  9:49:09
